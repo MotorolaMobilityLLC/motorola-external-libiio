@@ -4,7 +4,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libiio
 LOCAL_SRC_FILES := channel.c device.c context.c buffer.c utilities.c
-LOCAL_CFLAGS += -Wall -Wextra
+LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
 
 # LOG_LEVEL 0=off, 1=error, 2=warning, 3=info, 4=debug
 LOCAL_CFLAGS += -DLOG_LEVEL=4 -DLOG_TAG=\"libiio\"
@@ -48,7 +48,7 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := iio_genxml
-LOCAL_CFLAGS += -Wall -Wextra
+LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
 LOCAL_CXXFLAGS += -Weffc++
 LOCAL_SRC_FILES := tests/iio_genxml.c
 LOCAL_SHARED_LIBRARIES := libiio
@@ -72,7 +72,7 @@ include $(BUILD_EXECUTABLE)
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := iio_readdev
-LOCAL_CFLAGS += -Wall -Wextra
+LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
 LOCAL_CXXFLAGS += -Weffc++
 LOCAL_SRC_FILES := tests/iio_readdev.c
 LOCAL_SHARED_LIBRARIES := libiio

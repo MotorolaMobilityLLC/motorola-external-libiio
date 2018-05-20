@@ -4,7 +4,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libiio
 LOCAL_SRC_FILES := channel.c device.c context.c buffer.c utilities.c
-LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
+LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter -Wno-deprecated-declarations
 
 # LOG_LEVEL 0=off, 1=error, 2=warning, 3=info, 4=debug
 LOCAL_CFLAGS += -DLOG_LEVEL=4 -DLOG_TAG=\"libiio\"
